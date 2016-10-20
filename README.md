@@ -1,8 +1,14 @@
 # NAME
 
-Plack::Middleware::ClientCert - Parse a client certificate and put details in the env
+Plack::Middleware::ClientCert - Parse digital client certificates for Perl's PSGI web servers.
+
+# VERSION
+
+version 0.01
 
 # SYNOPSIS
+
+Parse a client certificate and put details in the env
 
     use Plack::Builder;
 
@@ -32,23 +38,21 @@ Any fields containing a comma are double-quoted.
 
 The keys for the certificate are:
 
-client_cn
-client_ou
-client_o
+client\_cn
+client\_ou
+client\_o
 
-# BUGS
+# NAME
 
-All complex software has bugs lurking in it, and this module is no
-exception. If you find a bug please either email me, or add the bug
-to cpan-RT.
+Plack::Middleware::ClientCert
 
 # AUTHOR
 
-Keith Carangelo <kcaran@gmail.com>
+Keith Carangelo <mail@kcaran.com>
 
 # COPYRIGHT AND LICENSE
 
-Copyright 2016 Keith Carangelo
+This software is copyright (c) 2016 by Keith Carangelo.
 
-This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself.
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.

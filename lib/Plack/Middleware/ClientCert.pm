@@ -1,4 +1,6 @@
 package Plack::Middleware::ClientCert;
+# ABSTRACT: Parse digital client certificates for Perl's PSGI web servers.
+
 use strict;
 use warnings;
 
@@ -69,11 +71,15 @@ sub call {
 
 __END__
 
+=pod
+
 =head1 NAME
 
-Plack::Middleware::ClientCert - Parse a client certificate and put details in the env
+Plack::Middleware::ClientCert
 
 =head1 SYNOPSIS
+
+Parse a client certificate and put details in the env
 
     use Plack::Builder;
 
@@ -91,7 +97,6 @@ Plack::Middleware::ClientCert - Parse a client certificate and put details in th
         $app;
     };
 
-
 =head1 DESCRIPTION
 
 Plack::Middleware::ClientCert parses the fields of a digital certificate
@@ -107,10 +112,6 @@ The keys for the certificate are:
 client_cn
 client_ou
 client_o
-
-=head1 AUTHOR
-
-Keith Carangelo
 
 =cut
 
