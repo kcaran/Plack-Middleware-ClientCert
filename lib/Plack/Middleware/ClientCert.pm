@@ -75,7 +75,22 @@ Plack::Middleware::ClientCert - Parse a client certificate and put details in th
 
 =head1 SYNOPSIS
 
-  enable "ClientCert";
+    use Plack::Builder;
+
+    my $app = sub {
+        my $env = shift;
+        return [
+            200,
+            [ 'Content-Type' => 'text/plain' ],
+            [ "Hello $env->{ client_cn } from $env->{ client_ou } of $env->{ clent_o }" ],
+        ];
+    };
+
+    builder {
+        enable 'ClientCert';
+        $app;
+    };
+
 
 =head1 DESCRIPTION
 
